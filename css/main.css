@@ -1,0 +1,557 @@
+@charset "utf-8";
+
+@import url(reset.css);
+
+
+/* ******************* 레이아웃 구성시작 **************** */
+#header>div, #footer>div, #intro>div{ padding: 0; }
+#footer{ height: 63px; }
+#intro{ height: 100vh; }
+
+.container, .container-fluid{ height: 100%;  padding:105px 0; }
+
+
+/* ******************* 공통영역 선언시작 **************** */
+body{ position: relative; }
+
+h1, h2, h3, h4, h5, h6{ margin: 0; padding: 0; }
+
+a, a:hover, a:focus{ text-decoration: none !important; }
+
+/** Title Style Setting  */
+.title{ margin-bottom: 84px ; }
+.title h2{ 
+  height: 63px;
+  text-align: center;
+  font:700 3.6rem/48px 'Nanum Gothic', sans-serif;
+  position: relative;
+ }
+ .title h2::after{
+  content:'';
+  display: block;
+  width: 50px;
+  height: 3px;
+  background-color: #f05f40;
+  position: absolute; bottom: 0; left: 50%;
+  margin-left: -25px;
+ }
+
+ /** Button Style Setting */
+ .button{
+  display: inline-block;
+  width: 160px;
+  height: 42px;
+  text-align: center;
+  font: 500 1.4rem/42px 'Roboto', sans-serif;
+  border-radius: 21px;
+
+  -webkit-transition: all ease 0.5s;
+  -moz-transition: all ease 0.5s;
+  -o-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+ }
+
+ .btn1{ background-color: #e74457; color:#fff; }
+ .btn1:hover{ color: #fff; background-color: #c9302c; }
+ .btn2{ background-color: #fff; color: #2d2d2d; }
+ .btn2:hover{ background-color: #e2e2e2; color: #2d2d2d; }
+
+ /** Jarallax CSS */
+ .jarallax {
+  position: relative;
+  z-index: 0;
+}
+.jarallax > .jarallax-img {
+  position: absolute;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+ 
+ 
+ 
+/* ******************* 개별영역 선언시작 **************** */
+/* ************ Header Area Start ********* */
+#header{  
+  padding: 15px 0;
+  background-color: transparent;
+  border: 0;
+}
+#header .container{padding: 0 15px;}
+#header h1, #header #gnb{ height: 30px; }
+#header h1 a, #header #gnb a{
+  text-decoration: none;
+  color: rgba(255,255,255, 0.7);
+}
+
+/** Logo **/
+#header h1{ width: 120px; padding: 5px 0; }
+#header h1 a{
+  display: block;
+  width: 100%;
+  height: 100%;
+  font: bold 2rem/30px 'Roboto', sans-serif;
+}
+/** Gnb **/
+#header #gnb a{
+  padding: 5px 15px;
+  font: 700 1.4rem/30px 'Nanum Gothic', sans-serif;
+
+  -webkit-transition: all ease 0.5s;
+  -moz-transition: all ease 0.5s;
+  -o-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+}
+#header #gnb a:hover{
+  background-color: rgba(255, 171,4, 0.5);
+}
+
+/* *** 메뉴 활성화 클래스 *** */
+#header, #header h1 a, #header #gnb a{
+  -webkit-transition: all ease 0.5s;
+  -moz-transition: all ease 0.5s;
+  -o-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+}
+.fixed{
+  padding: 10px 0 !important;
+  background-color: #fff !important;
+
+}
+.fixed h1 a{ color:#f05f40 !important; font-size: 1.8rem !important; }
+.fixed #gnb a{ color: #2d2d2d !important; }
+.fixed #gnb a:hover{ 
+  color: #f05f40 !important;
+  background-color: transparent !important;
+}
+
+/* *** 상단 스크롤 스파이 활성화 클레스 *** */
+#header.navbar-default .navbar-nav>.active>a,
+#header.navbar-default .navbar-nav>.active>a:focus, 
+#header.navbar-default .navbar-nav>.active>a:hover{
+  color: #f05f40 !important;
+  background-color: transparent !important;
+}
+
+/* ************ Intro Area Start ********* */
+#intro{
+  background: url(../images/lg/intro-bg.jpg) no-repeat top center / cover;
+}
+#intro .container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#intro .intro-content{
+  width: 970px;
+  text-align: center;
+  color: rgba(255,255,255, 0.7);
+}
+#intro .intro-content h2{
+  height: 168px;
+  margin-bottom: 42px;
+  font: 500 6rem/1.1 'Roboto', sans-serif;
+  position: relative;
+}
+#intro .intro-content h2::after{
+  content:'';
+  display: block;
+  width: 50px;
+  height: 3px;
+  position: absolute; bottom: 0; left: 50%;
+  margin-left: -25px;
+  background-color: #f05f40;
+}
+#intro .intro-content p{
+  width: 570px;
+  margin:0 auto 63px;
+}
+
+/* ************ About Area Start ********* */
+#about{
+  text-align: center;
+  background-color: #f05f40;
+  color: #fff;
+}
+#about h2{
+  height: 63px;
+  margin-bottom: 21px;
+  font: 700 3.6rem/42px 'Nanum Gothic', sans-serif;
+  position: relative;
+}
+#about h2::after{
+  content:'';
+  display: block;
+  width: 50px;
+  height: 3px;
+  position: absolute; bottom: 0; left: 50%;
+  margin-left: -25px;
+  background-color: #fff;
+}
+#about p{
+  width: 630px;
+  margin:0 auto 63px;
+}
+
+/* ************ Service Area Start ********* */
+#service .container h2{ margin-bottom: 63px; }
+#service .container{ padding-bottom: 0; }
+#service .content{ text-align: center; }
+#service .content>div{ padding: 0 15px; }
+#service .content>div .icon{
+  height: 42px;
+  line-height: 42px;
+  font-size: 4rem;
+  color:#f05f40;
+}
+#service .content>div h3{
+  height: 42px;
+  font: 700 2.4rem/42px 'Nanum Gothic', sans-serif;
+  margin: 21px 0;
+}
+
+/* ************ Portfolio Area Start ********* */
+#portfolio .container-fluid{ padding-bottom: 0; }
+/** g-menu */
+#portfolio .g-menu{
+  height: 42px;
+  text-align: center;
+  margin-top: 63px;
+}
+#portfolio .g-menu li{
+  display: inline-block;
+  width: 100px;
+  height: 42px;
+  margin: 0 6px;
+}
+#portfolio .g-menu li a{
+  display: block;
+  width: 100%;
+  height: 100%;
+  color:#2d2d2d;
+  border: 1px solid #888;
+  background-color: #f2f2f2;
+  font: 700 1.4rem/42px 'Nanum Gothic', sans-serif;
+}
+#portfolio .g-menu li a:hover{
+  background-color: #e2e2e2;
+}
+
+/** gallery Start */
+#portfolio #gallery .grid-item{
+  width: calc(100% / 3);
+}
+#portfolio #gallery .grid-item a{
+  display: block;
+  width: 100%;
+}
+#portfolio #gallery .grid-item img{ width: 100%; height: 100%; }
+#portfolio #gallery .grid-item .caption{
+  width: 100%;
+  height: 100%;
+  position: absolute; left: 0; top: 0;
+  background-color: rgba(240, 95, 64, 0.5);
+  color: rgba(255,255,255, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+
+  -webkit-transition: all ease 0.5s;
+  -moz-transition: all ease 0.5s;
+  -o-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+}
+#portfolio #gallery .grid-item a:hover .caption{ opacity: 1; }
+#portfolio #gallery .grid-item .caption h3{
+  font: 700 3rem 'Nanum Gothic', sans-serif;
+}
+
+
+/* ************ Member Area Start ********* */
+#member .content{ text-align: center; }
+#member .content>div{ padding: 0 15px; }
+#member .content .img-box{
+  display: inline-block;
+  width: 175px;
+  height: 175px;
+  position: relative;
+  margin-bottom: 21px;
+}
+#member .content .img-box::after{
+  content:'';
+  display: block;
+  width: 165px;
+  height: 165px;
+  background-color: rgba(0,0,0, 0.5);
+  position: absolute; left: 5px; top: 5px;
+  border-radius: 50%;
+  opacity: 0;
+}
+#member .content .img-box img{
+  border: 5px solid #ccc;
+  border-radius: 50%;
+}
+#member .content .img-box .sns-group{
+  width: 100%;
+  height: 21px;
+  
+  position: absolute; left: 0; top: 50%;
+  margin-top: -11px;
+  z-index: 999;
+  opacity: 0;
+}
+#member .content .img-box .sns-group a{ 
+  margin: 0 5px;
+  color: rgba(255,255,255, 0.8);
+  font-size: 2rem;
+}
+#member .content .img-box::after, 
+#member .content .img-box .sns-group{
+  -webkit-transition: all ease 0.6s;
+  -moz-transition: all ease 0.6s;
+  -o-transition: all ease 0.6s;
+  transition: all ease 0.6s;
+}
+#member .content .img-box:hover::after, 
+#member .content .img-box:hover .sns-group{
+  opacity: 1;
+}
+#member .content .img-box:hover .sns-group a:hover{
+  color: #c00;
+}
+
+#member .content h3{
+  height: 42px;
+  margin-bottom: 21px;
+  font: 700 1.6rem 'Nanum Gothic', sans-serif;
+}
+#member .content h3 span{
+  display: block;
+  font-size: 1.4rem;
+  margin-top: 5px;
+}
+
+/* ************ Banner Area Start ********* */
+
+/** Desktop Content */
+#banner .container-fluid{ color: #fff; text-align: center; background-image: url(../images/lg/banner-bg.jpg); }
+#banner .container-fluid .row{ margin-bottom: 0; }
+#banner .container-fluid h2{ margin-bottom: 21px; }
+/** Mobile Content */
+#banner .container{
+  display: none;
+  background: url(../images/lg/banner-bg.jpg) no-repeat 50% 50%;
+}
+
+/* ************ Contact Area Start ********* */
+#contact .container{ text-align: center; padding: 105px 15px; }
+#contact .container h2{ margin-bottom: 21px; }
+#contact .container h2+p{ font-size: 1.8rem; }
+
+#contact .container .content{ 
+  font-size: 1.6rem; font-weight: bold; color: #777;
+}
+#contact .container .content i{ font-size: 3.6rem; margin-bottom: 21px; }
+
+
+/* ************ Footer Area Start ********* */
+#footer{ background-color: #333; }
+#footer p{
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  line-height: 63px;
+  color: #fff;
+}
+
+
+/* ************ Media Query Area Start ********* */
+/* ************ Wide Area Start ********* */
+@media screen and (max-width: 1199px){
+  #intro .intro-content h2{ font-size: 5.2rem; }
+}
+
+/* ************ DeskTop Area Start ********* */
+@media screen and (max-width: 991px){
+  /* ********** 레이아웃 구성시작 ********** */
+  .container{ width: 100%; }
+  .navbar-right{ margin-right: 0; }
+
+  /* ********** 개별영역 선언시작 ********** */
+  /* ********** Intro Area Start ********** */
+  #intro .intro-content{ width: 100%; }
+  /* ********** Service Area Start ********** */
+  #service .content>div{ width: 25%; }
+  /* ********** Member Area Start ********** */
+  #member .content>div{width: calc(100% / 3);}
+  /* ********** Contact Area Start ********** */
+  #contact .content>div{width: calc(100% / 3);}
+   
+   
+}
+
+/* ************ Tablet & Desktop Area Start ********* */
+@media screen and (min-width: 768px) and (max-width: 959) {
+
+  /* ********** 개별영역 선언시작 ********** */
+ 
+  /* ********** Intro Area Start ********** */
+  #intro .intro-content h2{ 
+    font-size: 3.8rem;
+    height: 126px;
+  }
+  #intro .intro-content p{
+    width: 100%;
+    padding: 0 80px;
+  }
+
+  /* ********** About Area Start ********** */
+  #about p{
+    width: 100%;
+    padding: 0 80px;
+  }
+  
+  /* ********** Service Area Start ********** */
+  #service .content>div{width: 50%; margin-bottom: 42px; }
+  #service .content>div:nth-child(n+3){ margin-bottom: 0; }
+
+  /* ********** Portfolio Area Start ********** */
+  #portfolio #gallery .grid-item{ width: 50%; }
+  #portfolio #gallery .grid-item .caption h3{ font-size: 2rem;font-weight: 800; }
+
+  /* ********** Member Area Start ********** */
+  #member .content>div {
+    width: 100%;
+    margin-bottom: 63px;
+  }
+  #member .content>div:last-child{ margin-bottom: 0; }
+
+  #member .content>div p{
+    width: 100%; padding: 0 80px;
+  }
+
+  /* ********** Banner Area Start ********** */
+  #banner .container-fluid{display: none;}
+  #banner .container{display: block; color: #fff; text-align: center;}
+  #banner .container .row{ margin-bottom: 0; }
+  #banner .container h2{ margin-bottom: 21px; }
+  #banner .container p{ padding: 0 80px; }
+
+
+  /* ********** Contact Area Start ********** */
+  #contact .container h2+p{ font-size: 1.6rem; }
+  #contact .content>div{ width: 100%; margin-bottom: 63px; }
+  #contact .content>div:last-child{ margin-bottom: 0; }
+  
+}
+
+
+/* ************ Tablet Area Start ********* */
+@media screen and (max-width: 767px){
+
+  /* ********** 개별영역 선언시작 ********** */
+  /* ********** Header Area Start ********** */
+  #header{ background-color: rgba(0,0,0, 0.3); }
+  #header .container>.navbar-header{ margin-left: 0; }
+  #header .container>.navbar-header h1{ padding-top: 10px; }
+  #header .container>.navbar-header .navbar-toggle{ top: -3px; }
+  .navbar-default .navbar-toggle:focus, 
+  .navbar-default .navbar-toggle:hover{
+    background-color: rgba(221,221,221, 0.2);
+  }
+  .navbar-default .navbar-toggle .icon-bar{
+    color: rgba(255,255,255, 0.8);
+  }
+
+  /** GNB **/
+  #header #gnb{
+    height: auto; 
+    border-top-color: #e2e2e2;
+    padding: 15px 15px 10px;
+  }
+
+  /* ** 메뉴 활성화 ** */
+  .fixed h1 a{ font-size: 2rem !important; width: 200px; }
+
+  /* ********** Intro Area Start ********** */
+  #intro .intro-content h2{ 
+    font-size: 3.8rem;
+    height: 126px;
+  }
+  #intro .intro-content p{
+    width: 100%;
+    padding: 0 80px;
+  }
+
+  /* ********** About Area Start ********** */
+  #about p{
+    width: 100%;
+    padding: 0 80px;
+  }
+  
+  /* ********** Service Area Start ********** */
+  #service .content>div{width: 50%; margin-bottom: 42px; }
+  #service .content>div:nth-child(n+3){ margin-bottom: 0; }
+
+  /* ********** Portfolio Area Start ********** */
+  #portfolio #gallery .grid-item{ width: 50%; }
+  #portfolio #gallery .grid-item .caption h3{ font-size: 2rem;font-weight: 800; }
+
+  /* ********** Member Area Start ********** */
+  #member .content>div {
+    width: 100%;
+    margin-bottom: 63px;
+  }
+  #member .content>div:last-child{ margin-bottom: 0; }
+
+  #member .content>div p{
+    width: 100%; padding: 0 80px;
+  }
+
+  /* ********** Banner Area Start ********** */
+  #banner .container-fluid{display: none;}
+  #banner .container{display: block; color: #fff; text-align: center; }
+  #banner .container .row{ margin-bottom: 0; }
+  #banner .container h2{ margin-bottom: 21px; }
+  #banner .container p{ padding: 0 80px; }
+
+  /* ********** Contact Area Start ********** */
+  #contact .container h2+p{ font-size: 1.6rem; }
+  #contact .content>div{ width: 100%; margin-bottom: 63px; }
+  #contact .content>div:last-child{ margin-bottom: 0; }
+
+}
+
+/* ************ Mobile Area Start ********* */
+@media screen and (max-width: 501px){
+   /* ********** 개별영역 선언시작 ********** */
+  /* ********** Intro Area Start ********** */
+  #intro .intro-content h2{ font-size: 3.5rem; }
+  #intro .intro-content h2 br{ display: none; }
+
+  /* ********** about Area Start ********** */
+  #about h2{ margin-bottom: 42px; }
+  
+  /* ********** Service Area Start ********** */
+  #service .content>div{ width: 100%; }
+  #service .content>div:nth-child(3){ margin-bottom: 42px; }
+  #service .title{ margin-bottom: 42px; }
+  
+  /* ********** Portfolio Area Start ********** */
+  #portfolio #gallery .grid-item{ width: 100%; }
+  
+  /* ********** Member Area Start ********** */
+  #member .content>div p{padding: 0 15px;}
+
+  /* ********** Banner Area Start ********** */
+  #banner .container p{ padding: 0 15px; }
+  
+  /* ********** Contact Area Start ********** */
+  #contact .container h2{ margin-bottom: 42px; }
+
+}
+ 
